@@ -8,3 +8,17 @@ export  const  bugAdded = description =>(
         }
     
 })
+
+
+export  function  bugResolved(id) {
+    return {
+        type: actions.BUG_RESOLVED,
+        payload:{
+        id
+
+        }
+}
+
+    
+}
+

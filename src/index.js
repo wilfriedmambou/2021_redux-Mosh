@@ -18,10 +18,13 @@
 
 import store from './store/store'
 import {bugAdded}  from './actions'
-const unsubscribe = store.subscribe (()=>{
+import {bugResolved} from './actions'
+store.subscribe (()=>{
   console.log("Store Changed" , store.getState())
 })
 
 store.dispatch(bugAdded("Bug 1"));
+
+store.dispatch(bugResolved(1));
 
 console.log(store.getState());
